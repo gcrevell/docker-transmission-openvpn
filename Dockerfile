@@ -59,7 +59,7 @@ ENV OPENVPN_USERNAME=**None** \
     TRANSMISSION_WATCH_DIR_ENABLED=true \
     TRANSMISSION_HOME=/data/transmission-home \
     ENABLE_UFW=false \
-    TRANSMISSION_WEB_UI= \
+    TRANSMISSION_WEB_UI= 
 
 # Expose port and run
 EXPOSE 9091
