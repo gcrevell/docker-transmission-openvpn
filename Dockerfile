@@ -25,6 +25,10 @@ RUN apt-get update \
     && groupmod -g 1000 users \
     && useradd -u 911 -U -d /config -s /bin/false abc \
     && usermod -G users abc
+    # Custom setup for QNAP devices
+    && sudo mkdir -p /dev/net
+    && sudo mknod /dev/net/tun c 10 200
+    && sudo chmod 600 /dev/net/tun
 
 ADD openvpn/ /etc/openvpn/
 ADD transmission/ /etc/transmission/
